@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:preload_page_view/preload_page_view.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // ignore_for_file: public_member_api_docs
@@ -24,7 +25,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final controller = PageController(viewportFraction: 0.8, keepPage: true);
+  final controller = PreloadPageController(viewportFraction: 0.8, keepPage: true);
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 16),
               SizedBox(
                 height: 240,
-                child: PageView.builder(
+                child: PreloadPageView.builder(
                   controller: controller,
                   // itemCount: pages.length,
                   itemBuilder: (_, index) {

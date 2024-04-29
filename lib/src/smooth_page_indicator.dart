@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'effects/indicator_effect.dart';
 import 'effects/worm_effect.dart';
 import 'painters/indicator_painter.dart';
+import 'package:preload_page_view/preload_page_view.dart';
 
 /// Signature for a callback function used to report
 /// dot tap-events
@@ -14,7 +15,7 @@ typedef OnDotClicked = void Function(int index);
 /// Uses the [PageController.offset] to animate the active dot
 class SmoothPageIndicator extends StatefulWidget {
   /// The page view controller
-  final PageController controller;
+  final PreloadPageController controller;
 
   /// Holds effect configuration to be used in the [BasicIndicatorPainter]
   final IndicatorEffect effect;
